@@ -1,5 +1,5 @@
 import { storage } from '../libs/firebase';
-import { ref, listAll, getDownloadURL, uploadBytes } from 'firebase/storage';
+import { ref, listAll, getDownloadURL, uploadBytes, deleteObject } from 'firebase/storage';
 import { Photo } from '../types/photo';
 import { v4 as createId } from 'uuid';
 
@@ -53,4 +53,12 @@ export const insert = async ( file: File ) => {
   }else{
     return new Error('Tipo de arquivo não permitido.');
   }
+}
+
+// Apaga nossas imagens através do ref name, dentro de storage no firebase
+
+export const deletePhoto = async ( name: string ) => {
+  // local onde nosso imagem está e apagamos com base no name que recebemos
+  let photoRef = ref(storage, `images/${name}`);
+  await deleteObject(photoRef);
 }
