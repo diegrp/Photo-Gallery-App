@@ -1,3 +1,4 @@
+import * as C from "./styles";
 
 // Types das props que recebemos em nosso componente
 
