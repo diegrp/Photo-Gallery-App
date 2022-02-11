@@ -18,6 +18,8 @@ export const PhotoItem = ({ name, url, onDelete }: Props) => {
     <C.Wrapper>
       {/* Nome da nossa imagem */}
       <span>{name}</span>
+      {/* Botão para deletar nossa imagem */}
+      <button onClick={() => onDelete(name)} >X</button>
     </C.Wrapper>
     </C.Container>
   )

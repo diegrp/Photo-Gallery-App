@@ -21,4 +21,20 @@ export const Wrapper = styled.div`
     word-break: break-all;
   }
 
+  button{
+    font-size: 10px;
+    background-color: var(--default-btn);
+    border: none;
+    padding: 0.3rem 0.5rem;
+    border-radius: 50%;
+    color: white;
+    margin-left: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover{
+      background-color: var(--over-btn);
+    }
+  }
+
 `;
