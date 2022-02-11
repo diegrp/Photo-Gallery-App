@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import * as Photos from "../../services/photos";
 import { Photo } from "../../types/photo";
+import PhotoItem from "../PhotoItem";
 import * as C from "./styles";
 
 const PhotoGallery = () => {
@@ -42,9 +43,11 @@ const PhotoGallery = () => {
         <C.PhotoList>
           {photos.map((item, index) => {
             return(
-              <ul key={index}>
-                <li>{item.name}</li>
-              </ul>
+              <PhotoItem 
+                key={index} 
+                name={item.name} 
+                url={item.url}
+              />
             )
           })}
         </C.PhotoList>
