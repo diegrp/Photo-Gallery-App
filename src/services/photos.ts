@@ -1,6 +1,7 @@
 import { storage } from '../libs/firebase';
-import { ref, listAll, getDownloadURL } from 'firebase/storage';
+import { ref, listAll, getDownloadURL, uploadBytes } from 'firebase/storage';
 import { Photo } from '../types/photo';
+import { v4 as createId } from 'uuid';
 
 // Lista todas nossas imagens dentro de storage no firebase
 
@@ -28,4 +29,28 @@ export const getAll = async () => {
   }
 
   return list;
+}
+
+// Uploading de nossas imagens para dentro de storage no firebase
+
+export const insert = async ( file: File ) => {
+
+  // tipos de imagens que aceitamos
+  if(['image/jpeg','image/jpg','image/png'].includes(file.type)){
+
+    let randomName = createId();
+    // pegamos o local onde vamos fazer o uploading
+    let newFile = ref(storage, `images/${randomName}`);
+    // let newFile = ref(storage, `images/${file.name}`);
+    
+    // realizando o uploading através do local que pegamos
+    let upload = await uploadBytes(newFile, file);
+    // pegamos o url da imagem que fizemos upload
+    let photoUrl = await getDownloadURL(upload.ref);
+
+    return { name: upload.ref.name, url: photoUrl }
+
+  }else{
+    return new Error('Tipo de arquivo não permitido.');
+  }
 }
