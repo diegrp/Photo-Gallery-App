@@ -57,6 +57,13 @@ const PhotoGallery = () => {
     }
   }
 
+  // Função que apaga a imagem pelo ref name da imagem já publicada no firebase
+
+  const handleDeleteClick = async ( name: string ) => {    
+    await Photos.deletePhoto(name);
+    getPhotos();
+  }
+
   return (
     <>
       {/* Formulário de upload da imagem */}
@@ -85,6 +92,7 @@ const PhotoGallery = () => {
                 key={index} 
                 name={item.name} 
                 url={item.url}
+                onDelete={handleDeleteClick}
               />
             )
           })}

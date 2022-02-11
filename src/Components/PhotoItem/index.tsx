@@ -5,11 +5,12 @@ import * as C from "./styles";
 type Props = {
   name: string;
   url: string;
+  onDelete: ( name:string ) => void;
 }
 
 // Componente PhotoItem estilizado
 
-export const PhotoItem = ({ name, url }: Props) => {
+export const PhotoItem = ({ name, url, onDelete }: Props) => {
   return(
     <C.Container>
       {/* Imagem */}
