@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import * as Photos from "../../services/photos";
 import { Photo } from "../../types/photo";
+import * as C from "./styles";
 
 const PhotoGallery = () => {
   
