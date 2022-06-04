@@ -1,46 +1,70 @@
-# Getting Started with Create React App
+## ⚙️ Project Name <a name = "projectname" ></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="left">Photo Gallery App</p>
 
-## Available Scripts
+## ✍️ Project Description
 
-In the project directory, you can run:
+<p align="left">System for uploading and storing photos to my gallery, using: typescript, styled components and firebase.</p>
 
-### `npm start`
+## 🏁 Table of Contents <a name = "table-of-contents" ></a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [About](#projectname)
+- [Table of Contents](#table-of-contents)
+- [Application View](#application-view)
+- [Requirements](#requirements)
+- [Technologies](#technologies)
+- [Author](#author)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🪔 Project Status 
 
-### `npm test`
+<p align="left"> 
+  🚀 Photo Gallery App is finish! 🔥
+</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🖥️ Application View <a name = "application-view" ></a>
 
-### `npm run build`
+<br/>
+<h1 align="center">
+  <img alt="photo gallery" src="./public/images/assets/photo-gallery.gif" />
+</h1>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ⛏️ Requirements <a name = "requirements" ></a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+• Before starting, you will need to have the following tools installed on your machine:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
+Also it's nice to have an editor to work with code like [VSCode](https://code.visualstudio.com/).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🎲 Turning the Back End (Server)
 
-### `npm run eject`
+```bash
+# Clone this repository
+$ git clone <https://github.com/diegrp/Photo-Gallery-App.git>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Access the project folder in terminal/cmd
+$ cd photo-gallery
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Install the dependencies
+$ yarn
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Run the application in development mode
+$ yarn start
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# The server will start on port:3333 - access <http://localhost:3333>
+```
 
-## Learn More
+## 🛠️ Technologies <a name = "technologies" ></a>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+• The following tools were used in building the project: 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<b>code install: </b>npm i typescript firebase styled-components uuid
+
+- [Node.js](https://nodejs.org/en/)
+- [React.js](https://pt-br.reactjs.org/)
+- [Typescript](https://www.npmjs.com/package/typescript)
+- [Firebase](https://www.npmjs.com/package/firebase)
+- [styled-components](https://styled-components.com)
+- [uuid](https://www.npmjs.com/package/uuid)
+
+## 👨‍💼 Author <a name = "author" ></a>
+
+- Made with ❤️ by Diego Rocha !
